@@ -4,11 +4,10 @@ import { myHeaderStyles } from './my-header-styles';
 export class MyHeader extends LitElement {
   static styles = [myHeaderStyles];
 
-  static get properties() {
-    return {
-      title: { type: String },
-    };
-  }
+  static properties = {
+    title: '',
+    showContactInfo: false,
+  };
 
   constructor() {
     super();
@@ -21,12 +20,28 @@ export class MyHeader extends LitElement {
         <h1>${this.title}</h1>
         <nav>
           <ul>
-            <li>Posts</li>
-            <li>Contact</li>
+            <li @click="${this._hideContactInfo}">Posts</li>
+            <li @click="${this._showContactInfo}">Contact</li>
           </ul>
         </nav>
       </header>
+      ${this.showContactInfo
+        ? html`<div>
+            <p>
+              Contact me at:
+              <a href="mailto:email@email.com">email@email.com</a>
+            </p>
+          </div>`
+        : ''}
     `;
+  }
+
+  _showContactInfo() {
+    this.showContactInfo = true;
+  }
+
+  _hideContactInfo() {
+    this.showContactInfo = false;
   }
 }
 
