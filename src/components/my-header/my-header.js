@@ -1,37 +1,9 @@
-import { html, css, LitElement } from 'lit';
+import { html, LitElement } from 'lit';
+import { myHeaderStyles } from './my-header-styles';
 
 export class MyHeader extends LitElement {
-  static get styles() {
-    return css`
-      :host {
-        min-height: 100vh;
-        max-width: 960px;
-        margin: 0 auto;
-        text-align: center;
-        color: aliceblue;
-      }
-      header {
-        display: flex;
-        width: 100vw;
-        justify-content: space-around;
-        align-items: center;
-      }
-      ul {
-        width: 25vw;
-        display: flex;
-        justify-content: flex-end;
-        list-style: none;
-      }
-      li {
-        margin: 0 1rem;
-        padding: 0.5rem;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-    `;
-  }
+  static styles = [myHeaderStyles];
+
   static get properties() {
     return {
       title: { type: String },

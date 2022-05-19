@@ -1,19 +1,8 @@
-import { html, css, LitElement } from 'lit';
+import { html, LitElement } from 'lit';
+import { myFooterStyles } from './my-footer-styles';
 
 export class MyFooter extends LitElement {
-  static get styles() {
-    return css`
-      * {
-        box-sizing: border-box;
-      }
-      :host {
-        width: 100vw;
-        padding: 0.5rem 1rem;
-        text-align: center;
-        color: aliceblue;
-      }
-    `;
-  }
+  static styles = [myFooterStyles];
 
   constructor() {
     super();
