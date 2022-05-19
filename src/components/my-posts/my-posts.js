@@ -3,13 +3,16 @@ import { html, css, LitElement } from 'lit';
 export class MyPosts extends LitElement {
   //defining scoped styles
   static styles = css`
+    * {
+      box-sizing: border-box;
+    }
     section {
-      width: 90vw;
+      width: 80vw;
       max-width: 1300px;
       color: aliceblue;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       margin: 0.5rem auto;
     }
@@ -18,7 +21,7 @@ export class MyPosts extends LitElement {
       width: 30vw;
       min-width: 250px;
       padding-bottom: 1rem;
-      margin: 0.5rem 1rem;
+      margin: 0.5rem;
     }
     article:first-child {
       width: 100%;
