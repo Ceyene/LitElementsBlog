@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import './components/my-header/my-header';
+import './components/my-posts/my-posts';
 
 export class BlogLitelement extends LitElement {
   static get styles() {
@@ -17,11 +18,7 @@ export class BlogLitelement extends LitElement {
   render() {
     return html`
       <my-header></my-header>
-      <main>
-        <section>
-          <article></article>
-        </section>
-      </main>
+      <my-posts></my-posts>
     `;
   }
 }
