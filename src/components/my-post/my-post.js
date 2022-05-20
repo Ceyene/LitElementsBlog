@@ -11,10 +11,7 @@ export class MyPost extends LitElement {
   render() {
     return html`
       <article>
-        <img
-          src="https://dummyimage.com/600x400/479e9a/60438f.png&text=blog+dummy+img"
-          alt="Dummy blog image"
-        />
+        <img src=${this.post.image} alt="Dummy blog image" />
         <div class="post-content">
           <small>${this.post.date.toLocaleDateString()}</small>
           <h2>${this.post.title}</h2>
