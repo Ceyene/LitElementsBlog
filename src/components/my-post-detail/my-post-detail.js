@@ -27,8 +27,17 @@ export class MyPostDetail extends LitElement {
           <img src=${this.post.image} alt="Dummy blog image" />
           <p>${this.post.text}</p>
         </div>
+        <button @click=${this._postList}>Back to all posts</button>
       </article>
     `;
+  }
+  //event emitter
+  _postList() {
+    const options = {
+      bubbles: true,
+      composed: true,
+    };
+    this.dispatchEvent(new CustomEvent('postlist', options));
   }
 }
 

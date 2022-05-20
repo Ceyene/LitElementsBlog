@@ -21,6 +21,7 @@ export class MyPost extends LitElement {
     `;
   }
 
+  //event emitter
   async _postDetail() {
     const postDetail = this.post;
     const options = {

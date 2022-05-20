@@ -7,7 +7,7 @@ import './components/my-footer/my-footer';
 export class BlogLitelement extends LitElement {
   static properties = {
     newerPosts: { type: Boolean },
-    postDetail: {},
+    postDetail: { state: true },
   };
 
   constructor() {
@@ -33,6 +33,7 @@ export class BlogLitelement extends LitElement {
       <main
         @toggleorder=${this._postsOrderListener}
         @postdetail=${this._postDetailListener}
+        @postlist=${this._postListListener}
       >
         ${this.postDetail
           ? html`<my-postdetail .post=${this.postDetail}></my-postdetail>`
@@ -50,5 +51,8 @@ export class BlogLitelement extends LitElement {
   _postDetailListener(e) {
     const { date, excerpt, image, text, title } = e.detail.postDetail;
     this.postDetail = { date, excerpt, image, text, title };
+  }
+  _postListListener() {
+    this.postDetail = null;
   }
 }
