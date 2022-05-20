@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { myPostsStyles } from './my-posts-styles';
-
+import '../my-post/my-post';
 export class MyPosts extends LitElement {
   //defining scoped styles
   static styles = [myPostsStyles];
@@ -27,20 +27,7 @@ export class MyPosts extends LitElement {
   render() {
     return html`
       <section>
-        ${this.posts.map(
-          post => html`
-            <article>
-              <img
-                src="https://dummyimage.com/600x400/479e9a/60438f.png&text=blog+dummy+img"
-                alt="Dummy blog image"
-              />
-              <div class="post-content">
-                <h2>${post.title}</h2>
-                <p>${post.text}</p>
-              </div>
-            </article>
-          `
-        )}
+        ${this.posts.map(post => html`<my-post .post=${post}></my-post>`)}
       </section>
     `;
   }

@@ -10,6 +10,7 @@ export class BlogLitelement extends LitElement {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        text-align: center;
       }
     `;
   }
@@ -17,6 +18,7 @@ export class BlogLitelement extends LitElement {
   render() {
     return html`
       <my-header></my-header>
+      <h2>Latest Posts:</h2>
       <my-posts></my-posts>
       <my-footer></my-footer>
     `;

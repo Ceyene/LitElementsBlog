@@ -14,26 +14,4 @@ export const myPostsStyles = css`
     align-items: center;
     margin: 0.5rem auto;
   }
-  article {
-    background: #2d3c5f;
-    width: 30vw;
-    min-width: 250px;
-    padding-bottom: 1rem;
-    margin: 0.5rem;
-  }
-  article:first-child {
-    width: 100%;
-    margin: 0.5rem auto;
-    display: flex;
-    padding-bottom: 0;
-  }
-  img {
-    width: 30vw;
-    min-width: 250px;
-  }
-  .post-content {
-    padding: 1rem;
-    text-align: center;
-    width: 100%;
-  }
 `;
