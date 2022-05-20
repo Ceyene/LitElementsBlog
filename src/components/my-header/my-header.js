@@ -25,8 +25,8 @@ export class MyHeader extends LitElement {
           </button>
         </nav>
       </header>
-      ${this.showContactInfo
-        ? html`<div>
+      ${this.showContact
+        ? html`<div class="contactInfo">
             <p>
               Contact me at:
               <a href="mailto:email@email.com">email@email.com</a>
@@ -34,6 +34,12 @@ export class MyHeader extends LitElement {
           </div>`
         : ''}
     `;
+  }
+
+  //event handler
+  async _toggleContactInfo() {
+    this.showContact = !this.showContact;
+    await this.updateComplete;
   }
 }
 
