@@ -10,6 +10,7 @@ export const myPostStyles = css`
     min-width: 250px;
     padding-bottom: 1rem;
     margin: 0.5rem;
+    cursor: pointer;
   }
   img {
     width: 30vw;

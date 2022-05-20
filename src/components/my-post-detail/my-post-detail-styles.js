@@ -33,4 +33,13 @@ export const myPostDetailStyles = css`
   h1 {
     margin-top: 0.5rem;
   }
+  button {
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid aliceblue;
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: aliceblue;
+    cursor: pointer;
+  }
 `;
