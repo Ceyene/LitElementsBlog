@@ -27,7 +27,7 @@ export class MyPosts extends LitElement {
       : this.posts.sort((a, b) => b.date - a.date);
 
     return html`
-      <button>
+      <button @click=${this._togglePostsOrder}>
         ${this.newerPosts ? 'Show older posts first' : 'Show newer posts first'}
       </button>
       <section>
