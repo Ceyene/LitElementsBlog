@@ -10,7 +10,7 @@ export class BlogLitelement extends LitElement {
 
   constructor() {
     super();
-    this.newerPosts = false;
+    this.newerPosts = true;
   }
 
   static get styles() {
