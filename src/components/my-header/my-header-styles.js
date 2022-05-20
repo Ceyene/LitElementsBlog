@@ -13,6 +13,7 @@ export const myHeaderStyles = css`
     width: 100vw;
     justify-content: space-around;
     align-items: center;
+    background: black;
   }
   ul {
     width: 25vw;
@@ -34,5 +35,9 @@ export const myHeaderStyles = css`
     color: aliceblue;
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
+  }
+  .contactInfo {
+    background-color: #5f2d47;
+    padding: 1rem;
   }
 `;
