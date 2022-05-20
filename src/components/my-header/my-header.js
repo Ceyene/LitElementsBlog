@@ -6,12 +6,13 @@ export class MyHeader extends LitElement {
 
   static properties = {
     title: '',
-    showContactInfo: false,
+    showContact: { type: Boolean },
   };
 
   constructor() {
     super();
     this.title = 'Lit Elements Blog';
+    this.showContact = false;
   }
 
   render() {
@@ -19,10 +20,9 @@ export class MyHeader extends LitElement {
       <header>
         <h1>${this.title}</h1>
         <nav>
-          <ul>
-            <li @click="${this._hideContactInfo}">Posts</li>
-            <li @click="${this._showContactInfo}">Contact</li>
-          </ul>
+          <button @click="${this._toggleContactInfo}">
+            ${this.showContact ? 'Hide Contact Info' : 'Show Contact Info'}
+          </button>
         </nav>
       </header>
       ${this.showContactInfo
@@ -34,14 +34,6 @@ export class MyHeader extends LitElement {
           </div>`
         : ''}
     `;
-  }
-
-  _showContactInfo() {
-    this.showContactInfo = true;
-  }
-
-  _hideContactInfo() {
-    this.showContactInfo = false;
   }
 }
 

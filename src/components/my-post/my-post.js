@@ -16,6 +16,7 @@ export class MyPost extends LitElement {
           alt="Dummy blog image"
         />
         <div class="post-content">
+          <small>${this.post.date.toLocaleDateString()}</small>
           <h2>${this.post.title}</h2>
           <p>${this.post.text}</p>
         </div>
