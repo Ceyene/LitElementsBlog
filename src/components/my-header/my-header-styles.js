@@ -28,4 +28,11 @@ export const myHeaderStyles = css`
     text-decoration: none;
     color: inherit;
   }
+  button {
+    background: transparent;
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+  }
 `;

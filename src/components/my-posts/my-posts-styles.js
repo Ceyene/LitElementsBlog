@@ -14,4 +14,11 @@ export const myPostsStyles = css`
     align-items: center;
     margin: 0.5rem auto;
   }
+  button {
+    background: transparent;
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+  }
 `;
